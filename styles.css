@@ -4,8 +4,19 @@ body {
   margin: 0;
   font-family: "Roboto Mono";
 }
-p {
+* {
+  box-sizing: border-box; /* Apply to all elements */
+}
+p,
+h4 {
   margin: 0;
+  font-weight: 450;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
 }
 button {
   background-color: #085490;
@@ -19,6 +30,13 @@ button {
 }
 .bold-text {
   font-weight: 800;
+}
+.small-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.lightgrey-text {
+  color: rgb(55, 62, 68);
 }
 .navbar-right {
   grid-column: 2/3;
@@ -78,9 +96,11 @@ button {
 .topbar {
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.32);
+  height: 20vh;
+  z-index: 1;
 }
 .upper-segment,
 .lower-segment {
@@ -119,4 +139,90 @@ button {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+.center-grid {
+  background-color: #eeeeee;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 10fr;
+  align-items: end;
+  padding-left: 25px;
+  gap: 25px;
+  height: 80vh;
+}
+.card-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-rows: repeat(2, minmax(75, 1fr));
+  gap: 20px;
+  height: 90%;
+  align-self: start;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  border-left: 10px solid;
+  border-color: rgb(255, 233, 32);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.card-buttons {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.right-bar {
+  grid-row: 1/3;
+  align-self: flex-start;
+  align-items: end;
+  display: grid;
+  grid-template-rows: 1fr 4fr 40px 4fr;
+  height: 80vh;
+  padding-right: 20px;
+  gap: 5px;
+  padding-bottom: 10%;
+}
+.announcement-card {
+  background-color: white;
+  border-radius: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: small;
+}
+.trending-card {
+  background-color: white;
+  border-radius: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  font-size: small;
+  gap: 25px;
+}
+.trending-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.trending-item > img {
+  height: 50px;
 }
