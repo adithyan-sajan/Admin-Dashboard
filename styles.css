@@ -4,8 +4,21 @@ body {
   margin: 0;
   font-family: "Roboto Mono";
 }
-svg {
-  fill: white;
+p {
+  margin: 0;
+}
+button {
+  background-color: #085490;
+  color: white;
+  border-radius: 25px;
+  border-style: none;
+  width: 5.5rem;
+  height: 2.5rem;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+.bold-text {
+  font-weight: 800;
 }
 .navbar-right {
   grid-column: 2/3;
@@ -20,6 +33,7 @@ svg {
 .main-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
   height: 100%;
 }
 .sidebar {
@@ -30,12 +44,14 @@ svg {
   align-items: center;
   background-color: #085490;
   color: white;
-  font-weight: 800;
+  grid-row: 1/3;
 }
-.sidebar > svg {
+.sidebar > svg,
+.sidebar > span > svg {
   grid-column: 1/2;
   justify-self: end;
   align-self: center;
+  fill: white;
 }
 .dashboard-logo {
   flex-grow: 0.05;
@@ -58,4 +74,49 @@ svg {
 }
 .navbar2 > span {
   max-height: 50px;
+}
+.topbar {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.75);
+}
+.upper-segment,
+.lower-segment {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.left {
+  display: flex;
+  gap: 25px;
+  padding-left: 50px;
+  flex-grow: 5;
+  align-items: center;
+}
+.left > input {
+  width: 75%;
+  height: 30px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: lightgray;
+}
+.right {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+.right > img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.left > img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
